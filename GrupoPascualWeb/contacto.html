@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto | Grupo Pascual</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background:  
+        linear-gradient(rgba(16, 34, 53, 0.45), rgba(16, 34, 53, 0.45)),
+        url("imagenes/panelsolarportada.png") center center / cover no-repeat;
+            color: #102235;
+        }
+
+        header {
+            background: #102235;
+            color: white;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .marca {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .marca img {
+          
+            background: white;
+       
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+        
+
+        .marca h1 {
+            font-size: 22px;
+        }
+
+        .marca p {
+            color: #eab929;
+            font-size: 10px;
+            letter-spacing: 1px;
+            margin-top: 6px;
+        }
+
+        .volver {
+            color: #102235;
+            background: #eab929;
+            padding: 12px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+     .portada-contacto {
+    background:transparent;
+    text-align: center;
+    padding: 75px 8% 100px;
+}
+        
+
+        .portada-contacto span {
+            color: #eab929;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .portada-contacto h2 {
+            font-size: 42px;
+            margin: 20px 0;
+        }
+
+        .portada-contacto p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #d6dee7;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .redes {
+            max-width: 1100px;
+            margin: -35px auto 70px;
+            padding: 0 25px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+            position: relative;
+        }
+
+        .tarjeta-red {
+            background: white;
+            border-radius: 10px;
+            padding: 28px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 4px solid #eab929;
+            box-shadow: 0 8px 25px rgba(16, 34, 53, 0.07);
+            transition: transform 0.3s ease;
+        }
+
+        .tarjeta-red:hover {
+            transform: translateY(-5px);
+        }
+
+        .icono-red {
+            min-width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #102235;
+            color: #eab929;
+            border-radius: 50%;
+            font-size: 23px;
+            font-weight: bold;
+        }
+.icono-red img {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+    display: block;
+}
+        .texto-red h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .texto-red p {
+            color: #526171;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .enlace-red {
+            display: inline-block;
+            color: #102235;
+            background: #eab929;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .enlace-red:hover {
+            background: #d5a51b;
+        }
+
+        .nota-contacto {
+            max-width: 800px;
+            margin: 0 auto 70px;
+            padding: 0 25px;
+            text-align: center;
+        }
+
+        .nota-contacto h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .nota-contacto p {
+            color: #526171;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #102235;
+            color: #d6dee7;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .marca {
+                flex-direction: column;
+            }
+
+            .portada-contacto h2 {
+                font-size: 32px;
+            }
+
+            .redes {
+                grid-template-columns: 1fr;
+                margin-top: -30px;
+            }
+
+            .tarjeta-red {
+                padding: 22px;
+            }
+        }
+        /* Efecto de brisa al entrar en Contacto */
+body {
+    animation: entradaBrisa 0.8s ease-out;
+}
+
+@keyframes entradaBrisa {
+    from {
+        opacity: 0;
+        transform: translateX(25px);
+        filter: blur(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+body.saliendo {
+    animation: salidaBrisa 0.7s ease-in forwards;
+}
+
+@keyframes salidaBrisa {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(35px);
+        filter: blur(4px);
+    }
+}
+.qr-whatsapp {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.qr-whatsapp img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+    padding: 8px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(16, 34, 53, 0.12);
+}
+
+.qr-whatsapp p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #526173;
+    margin: 0;
+}
+    </style>
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="marca">
+            <img src="imagenes/logo.jpeg" alt="Logo de Grupo Pascual">
+
+            <div>
+                <h1>GRUPO PASCUAL</h1>
+                <p>INSTALACIONES Y MANTENIMIENTO PROFESIONAL</p>
+            </div>
+        </div>
+
+   <a href="index.html" class="volver" onclick="activarBrisa(event, this.href)">← VOLVER AL INICIO</a>
+    </header>
+
+    <section class="portada-contacto">
+        <span>ESTAMOS PARA AYUDARTE</span>
+
+        <h2>Hablemos de tu proyecto</h2>
+
+        <p>
+            En Grupo Pascual queremos conocer tus necesidades y ayudarte
+            a encontrar la solución adecuada. Elegí el medio de contacto
+            que prefieras y conversemos sobre tu próximo proyecto.
+        </p>
+    </section>
+
+    <main>
+        <section class="redes">
+
+            <article class="tarjeta-red">
+             <div class="icono-red">
+    <img src="https://cdn.simpleicons.org/whatsapp/EAB929" alt="WhatsApp">
+</div>
+
+                <div class="qr-whatsapp">
+    <img src="imagenes/QR.jpeg" alt="Código QR de WhatsApp de Grupo Pascual">
+    <p>Escaneá el código QR para contactarnos por WhatsApp.</p>
+</div>
+                    <a class="enlace-red" href="https://wa.me/message/G7STGM7CDO6NC1?text=Hola%2C%20Grupo%20Pascual.%20%F0%9F%91%8B%0A%0AMe%20comunico%20para%20solicitar%20un%20presupuesto.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20lo%20siguiente%3A%0A%0A" target="_blank" rel="noopener">
+                        Escanee o haga click aqui
+                    </a>
+                </div>
+            </article>
+
+            <article class="tarjeta-red">
+             <div class="icono-red">
+    <img src="https://cdn.simpleicons.org/instagram/EAB929" alt="Instagram">
+</div>
+
+                <div class="texto-red">
+                    <h3>Instagram</h3>
+                    <p>Conocé nuestros trabajos, proyectos y novedades.</p>
+                    <a class="enlace-red" href="https://www.instagram.com/grupopascual_electrica/" target="_blank" rel="noopener">
+                        VISITAR INSTAGRAM
+                    </a>
+                </div>
+            </article>
+
+            <article class="tarjeta-red">
+                <div class="icono-red">
+    <img src="https://cdn.simpleicons.org/facebook/EAB929" alt="Facebook">
+</div>
+
+                <div class="texto-red">
+                    <h3>Facebook</h3>
+                    <p>Encontrá más información y novedades de la empresa.</p>
+                    <a class="enlace-red" href="https://www.facebook.com/share/1HiDdbcoyu/" target="_blank" rel="noopener">
+                        VISITAR FACEBOOK
+                    </a>
+                </div>
+            </article>
+
+            <article class="tarjeta-red">
+             
+   <div class="icono-red linkedin">
+    <span>in</span>
+</div>
+                <div class="texto-red">
+                    <h3>LinkedIn</h3>
+                    <p>Conectemos profesionalmente y hablemos de nuevos proyectos.</p>
+                  
+<a class="enlace-red" href="https://www.linkedin.com/in/grupo-pascual-277a52445/" target="_blank" rel="noopener noreferrer">VISITAR LINKEDIN</a>
+
+                </div>
+            </article>
+
+            <article class="tarjeta-red">
+             <div class="icono-red">
+    <img src="https://cdn.simpleicons.org/gmail/EAB929" alt="Correo electrónico">
+</div>
+
+                <div class="texto-red">
+                    <h3>Correo electrónico</h3>
+                    <p>Escribinos por consultas comerciales y solicitudes formales.</p>
+                 
+<a class="enlace-red"
+   href="https://mail.google.com/mail/?view=cm&fs=1&to=grupopascualservice@gmail.com&su=Consulta%20y%20solicitud%20de%20presupuesto&body=Hola%20Grupo%20Pascual,%0A%0AMe%20comunico%20para%20realizar%20una%20consulta%20sobre%20sus%20servicios.%0A%0AMi%20consulta%20es:%0A%0AMuchas%20gracias."
+   target="_blank"
+   rel="noopener noreferrer">
+   ENVIAR UN CORREO
+</a>
+
+                </div>
+            </article>
+
+        </section>
+
+        <section class="nota-contacto">
+            <h2 style="color: white;">Tu proyecto, nuestro compromiso</h2>
+
+        <p style="color: white;">
+    Estamos a disposición para escuchar tu propuesta, conocer tus necesidades y conversar sobre las posibles soluciones. Será un gusto ponernos en contacto con vos.
+</p>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Grupo Pascual | Instalaciones, mantenimiento y confianza.
+    </footer>
+<script>
+    function activarBrisa(event, destino) {
+        event.preventDefault();
+
+        document.body.classList.add("saliendo");
+
+        setTimeout(function () {
+            window.location.href = destino;
+        }, 700);
+    }
+</script>
+</body>
+</html>
